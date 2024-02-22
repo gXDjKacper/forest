@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="park, las, natura">
+    <meta name="author" content="Kacper Olechowski">
+    <meta name="description" content="Zapraszamy do naszego parku leśnego, gdzie natura czeka na Ciebie z otwartymi ramionami.">
+    <script src="https://kit.fontawesome.com/dad5bdf745.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <title>Forest - kontakt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+
+<body>
+    <div class="body-shadow"></div>
+    <nav class="nav nav-mobile">
+        <div class="container">
+            <div class="nav__brand">
+                <i class="nav__icon fa-solid fa-tree"></i>
+                <p class="nav__brand-name">Forest</p>
+            </div>
+
+            <button class="burger-btn">
+                <i class="burger-btn__open fa-solid fa-bars burger-active"></i>
+                <i class="burger-btn__close fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="nav-mobile__items-hide"></div>
+        <ul class="nav-mobile__items">
+            <div class="container">
+                <li class="nav-mobile__item"><a href="./index.html">Home</a></li>
+                <li class="nav-mobile__item"><a href="./index.html#aboutus">O nas</a></li>
+                <li class="nav-mobile__item"><a href="./index.html#offers">Oferta</a></li>
+                <li class="nav-mobile__item"><a href="#contact">Kontakt</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <nav class="nav nav-desktop">
+        <div class="container">
+            <div class="nav__brand">
+                <i class="nav__icon fa-solid fa-tree"></i>
+                <p class="nav__brand-name">Forest</p>
+            </div>
+            <ul class="nav-desktop__items">
+                <li class="nav-desktop__item"><a href="./index.html">Home</a></li>
+                <li class="nav-desktop__item"><a href="./index.html#aboutus">O nas</a></li>
+                <li class="nav-desktop__item"><a href="./index.html#offers">Oferta</a></li>
+                <li class="nav-desktop__item"><a href="#contact">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__content">
+                <h1 class="header__heading">Forest Group</h1>
+                <p class="header__text">Skontaktuj się z naszym zespołem!</p>
+            </div>
+        </div>
+        <div class="header__shadow"></div>
+    </header>
+
+    <main>
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Kontakt</h2>
+            <div class="container">
+
+                <form class="contact__box">
+                    <i class="contact__icon fa-regular fa-envelope"></i>
+                    <div class="contact__form-box"><input type="text" id="name" class="contact__input"
+                            placeholder="Imię">
+                        <p class="contact__error-info">Podaj imię</p>
+                    </div>
+
+                    <div class="contact__form-box"><input type="text" id="surname" class="contact__input"
+                            placeholder="Nazwisko">
+                        <p class="contact__error-info">Podaj nazwisko</p>
+                    </div>
+
+                    <div class="contact__form-box">
+                        <input type="text" id="email" class="contact__input" placeholder="Adres email">
+                        <p class="contact__error-info">Podaj adres email</p>
+                    </div>
+                    <div class="contact__form-box">
+                        <textarea id="msg" placeholder="Wiadomość" class="contact__textarea"></textarea>
+                        <p class="contact__error-info">Wpisz wiadomość</p>
+                    </div>
+                    
+                    <button class="contact__btn">Wyślij</button>
+                </form>
+                <div class="contact__popup">
+                    <p class="contact__popup-info">Formularz został poprawnie wysłany!</p>
+                    <button class="contact__popup-btn">Zamknij
+                    </button>
+                </div>
+                <iframe class="contact__map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.897660176271!2d19.890274276854814!3d50.08820291337986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a2d7f0d587f%3A0x15f4e7c36adff6d2!2sJasnog%C3%B3rska%202%2C%2031-358%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1708159467188!5m2!1spl!2spl"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+        <section class="sitemap section">
+            <div class="container">
+                <div class="sitemap__brand">
+                    <i class="sitemap__icon fa-solid fa-tree"></i>
+                    <p class="sitemap__brand-name">Forest</p>
+                </div>
+                <div class="sitemap__content">
+                    <div class="sitemap__column">
+                        <h3 class="sitemap__heading sitemap__first-heading">O nas</h3>
+                        <a href="#" class="sitemap__link">Historia</a>
+                        <a href="#" class="sitemap__link">Parki</a>
+                        <a href="#" class="sitemap__link">Opinie</a>
+                    </div>
+                    <div class="sitemap__column">
+                        <h3 class="sitemap__heading">Nasza firma</h3>
+                        <a href="#" class="sitemap__link">Praca</a>
+                        <a href="#" class="sitemap__link">Kadry</a>
+                        <a href="#" class="sitemap__link">Zarząd</a>
+                    </div>
+                    <div class="sitemap__column">
+                        <h3 class="sitemap__heading">Dokumenty</h3>
+                        <a href="#" class="sitemap__link">Wnioski</a>
+                        <a href="#" class="sitemap__link">Rezerwacje</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy;<span class="footer__date"></span> Forest Group Company Ltd.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="./dist/js/contact-script.min.js"></script>
+</body>
+
+</html>
