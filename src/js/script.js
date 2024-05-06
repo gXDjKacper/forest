@@ -1,59 +1,24 @@
-let burgerBtn
-let burgerBtnOpen
-let burgerBtnClose
-let navMenu
-let navMobileLinks
-let footerDate
-
-// let num = 0
-
-const main = () => {
-	prepareDOMElements()
-	prepareDOMEvents()
-	handleCurrentYear()
-}
-
-const prepareDOMElements = () => {
-	burgerBtn = document.querySelector('.burger-btn')
-	burgerBtnOpen = document.querySelector('.burger-btn__open')
-	burgerBtnClose = document.querySelector('.burger-btn__close')
-	navMenu = document.querySelector('.nav-mobile__items')
-	navMobileLinks = document.querySelectorAll('.nav-mobile__item')
-	footerDate = document.querySelector('.footer__date')
-}
-
-const prepareDOMEvents = () => {
-	burgerBtn.addEventListener('click', handleNav)
-}
+const root = document.documentElement
+const nav = document.querySelector('.nav')
+root.style.setProperty('--nav-height', `${nav.offsetHeight}px`)
+const burgerBtn = document.querySelector('.hamburger')
+const navMenu = document.querySelector('.nav__items')
+const navLinks = document.querySelectorAll('.nav__item')
+const footerDate = document.querySelector('.footer__date')
 
 const handleNav = () => {
 	navMenu.classList.toggle('nav-active')
-
-	navMobileLinks.forEach(item => {
-		item.addEventListener('click', () => {
-			navMenu.classList.remove('nav-active')
-			burgerBtnClose.classList.remove('burger-active')
-			setTimeout(() => {
-				burgerBtnOpen.classList.add('burger-active')
-			}, 100)
-		})
-	})
-
-	if (burgerBtnOpen.classList.contains('burger-active')) {
-		burgerBtnOpen.classList.remove('burger-active')
-		setTimeout(() => {
-			burgerBtnClose.classList.add('burger-active')
-		}, 100)
-	} else {
-		burgerBtnClose.classList.remove('burger-active')
-		setTimeout(() => {
-			burgerBtnOpen.classList.add('burger-active')
-		}, 100)
-	}
+	burgerBtn.classList.toggle('is-active')
+	const isOpened = JSON.parse(burgerBtn.getAttribute('aria-expanded'))
+	burgerBtn.setAttribute('aria-expanded', !isOpened)
 }
 
 const handleCurrentYear = () => {
 	footerDate.textContent = new Date().getFullYear()
 }
 
-addEventListener('DOMContentLoaded', main)
+navLinks.forEach(item => {
+	item.addEventListener('click', handleNav)
+})
+burgerBtn.addEventListener('click', handleNav)
+handleCurrentYear()

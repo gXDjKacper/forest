@@ -1,0 +1,55 @@
+@use './variables' as *;
+
+@mixin flex($fdir: row, $jc: center, $ai: center) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
+	flex-direction: $fdir;
+}
+
+@mixin grid() {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+}
+
+@mixin pseudoelement($bg-color: rgba(0, 0, 0, 0.6)) {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-color: $bg-color;
+	z-index: -5;
+}
+
+@mixin text($c: inherit, $fsize: inherit, $fweight: inherit, $textalign: left, $margin: 0) {
+	margin: $margin;
+	color: $c;
+	font-size: $fsize;
+	font-weight: $fweight;
+	text-align: $textalign;
+}
+@mixin icon($c: inherit, $fsize: inherit, $margin: 0) {
+	margin: $margin;
+	color: $c;
+	font-size: $fsize;
+}
+
+@mixin btn($padding, $margin, $fsize) {
+	padding: $padding;
+	margin: $margin;
+	background-color: $white;
+	color: $grey;
+	border: none;
+	border-radius: 0.8rem;
+	box-shadow: 0 3px 8px $light-grey;
+	font-size: $fsize;
+	transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+	outline: none;
+	cursor: pointer;
+
+	&:hover, &:focus-visible {
+		background-color: $green;
+		color: $black;
+		box-shadow: 0 3px 8px $green;
+	}
+
+}
