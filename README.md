@@ -5,7 +5,7 @@ Design from [MMC School part 4 of the web development course](https://mmcschool.
 
 ## 🚀 Demo
 
-[gxdjkacper.github.io/forest/](gxdjkacper.github.io/forest/)
+[gxdjkacper.github.io/forest/](https://gxdjkacper.github.io/forest/)
 
 ## ⚙ Resources
 
